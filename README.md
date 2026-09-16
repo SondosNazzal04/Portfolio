@@ -38,4 +38,5 @@ This is a static front-end website, meaning no backend server or package install
    ```
 
 3. **Launch the site:**
-   Simply double-click the index.html file to open it in your default web browser, or use a tool like VS Code's "Live Server" extension for hot-reloading during development.
+   Simply double-click the index.html file to open it in your default web browser, or use a tool like VS Code's "Live Server" extension for hot-reloading during development.\
+   you can access the website live at https://sondosnazzal04.github.io/Portfolio/
