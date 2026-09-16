@@ -310,6 +310,7 @@ form {
 .input-field input {
 	border-radius: 0.5rem;
 	border: none;
+	padding: 0.5rem;
 }
 
 form button {
@@ -322,4 +323,33 @@ form button {
 
 #message {
 	height: 4rem;
+}
+
+footer {
+	width: 100% !important;
+	display: flex !important;
+	justify-content: space-between !important; /* Pushes the logo left and links right */
+	align-items: center !important; /* Vertically centers the logo and links */
+	flex-direction: row !important;
+	margin-top: 10%;
+	margin-bottom: 0;
+}
+
+footer .footer-links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+	list-style: none;
+}
+
+.footer-links a {
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.contact-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
