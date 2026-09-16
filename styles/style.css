@@ -296,3 +296,30 @@ header {
 	color: var(--bg-dark-second);
 	text-decoration: none;
 }
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-field {
+	display: flex;
+	flex-direction: column;
+}
+
+.input-field input {
+	border-radius: 0.5rem;
+	border: none;
+}
+
+form button {
+	margin-top: 5%;
+	background-color: #3F8E00;
+	border: none;
+	color: var(--text-light-color);
+	border-radius: 0.5rem;
+}
+
+#message {
+	height: 4rem;
+}
