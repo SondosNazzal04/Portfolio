@@ -229,12 +229,70 @@ header {
 .skill {
 	margin: 2%;
 	border: var(--primary-gold) solid 2px;
-	border-radius: 50%;
-	padding: 2%;
+	border-radius: 2rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 	font-size: 70%;
 	width: fit-content;
 }
 
 .skill:hover {
 	box-shadow: 0 0 0.5rem 0.5rem var(--primary-gold);
+}
+
+.projects-section {
+	background: var(--gold-gradient);
+}
+
+.projects-section h1 {
+	color: var(--bg-dark-second);
+}
+
+.project-card {
+	display: flex;
+	/* border: magenta 1px solid; */
+	padding: 2%;
+}
+
+.project-card:hover {
+	border: var(--bg-dark-second) solid 3px;
+	border-radius: 4rem;
+}
+
+.project-card .project-card-img {
+	width: 50%;
+	justify-content: center;
+	justify-items: center;
+	height: 100%;
+	margin: 5%;
+}
+
+.project-card .project-card-text {
+	width: 50%;
+}
+
+.project-card-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.project-technologies {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.technology {
+	margin-right: 2%;
+	border: var(--text-dark-color) solid 3px;
+	padding: 0.5%;
+	border-radius: 2rem;
+	font-size: small;
+}
+
+.project-card a {
+	background-color: var(--bg-light-second);
+	padding: 2%;
+	border-radius: 2rem;
+	color: var(--bg-dark-second);
+	text-decoration: none;
 }
