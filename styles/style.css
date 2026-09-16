@@ -53,16 +53,17 @@ body:has(#color-theme-toggle:checked) .text{
 
 .sub-text {
 	font-family: monospace;
+	text-transform: uppercase;
 }
 
 /* 1. Hide the Sun (light icon) by default */
 .light-icon-button {
-    display: inline-block;
+	display: inline-block;
 }
 
 /* (Optional) Ensure the Moon (dark icon) is visible by default */
 .dark-icon-button {
-    display: none;
+	display: none;
 }
 
 /* 2. When the checkbox is CHECKED, hide the Moon */
@@ -123,6 +124,11 @@ body:has(#color-theme-toggle:checked) .theme-button {
 	height: fit-content;
 	margin: 1em;
 	width: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
 }
 
 .hero-text-col {
@@ -159,24 +165,26 @@ body:has(#color-theme-toggle:checked) .first-name {
 	color: var(--primary-gold);
 }
 
-.about-section {
+.columns {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	padding: 1rem;
+	/* flex-direction: column; */
 }
 
 .about-columns {
-	display: flex;
+	/* display: flex; */
 	margin: 2%;
 	justify-content: center;
 	justify-items: center;
 
 }
 
-.about-column {
+.column {
 	margin: 2%;
+	/* border: magenta 1px solid; */
+	/* width: 50%; */
+}
+
+.about-column {
 	background: var(--gold-gradient);
 	padding: 2%;
 	border-radius: 1rem;
@@ -187,14 +195,46 @@ body:has(#color-theme-toggle:checked) .first-name {
 		var(--gold-gradient) border-box; */
 }
 
-.about-column h1 {
+.column h2 {
 	font-size: 100%;
 }
 
-.about-column p {
+.about-column h2 {
+	font-size: 150%;
+}
+
+.column p {
 	font-size: 70%;
 }
 
 header {
 	margin: auto 1rem;
+}
+
+.section-title {
+	color: var(--primary-gold);
+}
+
+.skills-column {
+	display: flex;
+	padding: 2%;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5%;
+}
+
+.skill {
+	margin: 2%;
+	border: var(--primary-gold) solid 2px;
+	border-radius: 50%;
+	padding: 2%;
+	font-size: 70%;
+	width: fit-content;
+}
+
+.skill:hover {
+	box-shadow: 0 0 0.5rem 0.5rem var(--primary-gold);
 }
