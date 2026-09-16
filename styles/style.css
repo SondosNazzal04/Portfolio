@@ -382,3 +382,7 @@ footer .footer-links {
 	flex-direction: column;
 	justify-content: space-evenly;
 }
+
+body:has(#color-theme-toggle:checked) footer.section {
+	background-color: var(--bg-light-color) in !important;
+}
