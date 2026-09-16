@@ -4,6 +4,9 @@
 	--text-dark-color : #1B1B1B;
 	--text-light-color : #F4F4F4;
 	--gold-gradient : linear-gradient(90deg,rgba(203, 163, 101, 1) 0%, rgba(169, 146, 125, 1) 100%);
+	--primary-gold : rgba(203, 163, 101, 10);
+	--bg-dark-second : #2A2A2A;
+	--bg-light-second : #EAEAEA;
 }
 
 body {
@@ -35,19 +38,16 @@ body:has(#color-theme-toggle:checked) .text{
 
 .main-text {
 	font-family: Georgia, 'Times New Roman', Times, serif !important;
-	/* position: relative;
-	display: inline-block;
-	text-decoration: none; */
 }
 
 .logo::after {
 	content: "";
 	position: absolute;
 	left: -10%;
-	bottom: -10px;
+	bottom: -0.75rem;
 	width: 120%;
-	height: 15px;
-	border-top: 1.5px solid currentColor;
+	height: 1rem;
+	border-top: 0.12rem solid currentColor;
 	border-radius: 50%;
 }
 
@@ -76,20 +76,73 @@ body:has(#color-theme-toggle:checked) .light-icon-button {
 }
 
 .theme-button {
-	border: 3px solid transparent;
+	border: 0.25rem solid transparent;
 	width: fit-content;
-	padding: 5px;
-	/* border-image: var(--gold-gradient) 1; */
+	padding: 0.5rem;
 	background:
 		linear-gradient(var(--bg-dark-color), var(--bg-dark-color)) padding-box,
 		var(--gold-gradient) border-box;
-	border-radius: 15px;
-	box-shadow: 0 0 50px 4px rgba(203, 163, 101, 10);
-	/* background-color: rgba(203, 163, 101, 1); */
+	border-radius: 1rem;
+	box-shadow: 0 0 3rem 0.25rem var(--primary-gold);
 }
 
 body:has(#color-theme-toggle:checked) .theme-button {
 	background:
 		linear-gradient(var(--bg-light-color), var(--bg-light-color)) padding-box,
 		var(--gold-gradient) border-box;
+}
+
+.first-name {
+	color: var(--primary-gold);
+}
+
+.hero-img {
+	width: 350px;
+	border-radius: 350px;
+}
+
+.hero-img-col {
+	width: 450px;
+	height: 450px;
+	display: flex;
+	align-items: center;
+}
+
+.hero {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.section {
+	background-color: var(--bg-dark-second);
+	border-radius: 10px;
+	height: fit-content;
+	margin: 1em;
+}
+
+.hero-text-col {
+	width: 450px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 30px;
+}
+
+.last-name {
+	display: block !important;
+	width: fit-content !important;
+	margin-left: 1.5em !important;
+}
+
+.name {
+	font-size: 100px;
+}
+
+body:has(#color-theme-toggle:checked) .section {
+	background-color: var(--bg-light-second);
+}
+
+body:has(#color-theme-toggle:checked) .first-name {
+	color: var(--primary-gold);
 }
