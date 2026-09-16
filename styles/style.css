@@ -1,0 +1,12 @@
+:root {
+	--bg-dark-color : #1A1A1A;
+	--bg-light-color : #F5F5F5;
+}
+
+body {
+	background-color: var(--bg-dark-color);
+}
+
+body:has(#color-theme-toggle:checked) {
+	background-color: var(--bg-light-color);
+}
