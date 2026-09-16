@@ -187,6 +187,14 @@ body:has(#color-theme-toggle:checked) .first-name {
 		var(--gold-gradient) border-box; */
 }
 
+.about-column h1 {
+	font-size: 100%;
+}
+
+.about-column p {
+	font-size: 70%;
+}
+
 header {
 	margin: auto 1rem;
 }
