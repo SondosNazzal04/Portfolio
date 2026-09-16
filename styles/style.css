@@ -1,6 +1,9 @@
 :root {
 	--bg-dark-color : #1A1A1A;
 	--bg-light-color : #F5F5F5;
+	--text-dark-color : #1B1B1B;
+	--text-light-color : #F4F4F4;
+	--gold-gradient : linear-gradient(90deg,rgba(203, 163, 101, 1) 0%, rgba(169, 146, 125, 1) 100%);
 }
 
 body {
@@ -9,4 +12,84 @@ body {
 
 body:has(#color-theme-toggle:checked) {
 	background-color: var(--bg-light-color);
+}
+
+body:has(#color-theme-toggle:checked) .text{
+	color: var(--text-dark-color);
+}
+
+#color-theme-toggle {
+	display: none;
+}
+
+.text {
+	color: var(--text-light-color);
+}
+
+.logo {
+	font-family: Georgia, 'Times New Roman', Times, serif !important;
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.main-text {
+	font-family: Georgia, 'Times New Roman', Times, serif !important;
+	/* position: relative;
+	display: inline-block;
+	text-decoration: none; */
+}
+
+.logo::after {
+	content: "";
+	position: absolute;
+	left: -10%;
+	bottom: -10px;
+	width: 120%;
+	height: 15px;
+	border-top: 1.5px solid currentColor;
+	border-radius: 50%;
+}
+
+.sub-text {
+	font-family: monospace;
+}
+
+/* 1. Hide the Sun (light icon) by default */
+.light-icon-button {
+    display: inline-block;
+}
+
+/* (Optional) Ensure the Moon (dark icon) is visible by default */
+.dark-icon-button {
+    display: none;
+}
+
+/* 2. When the checkbox is CHECKED, hide the Moon */
+body:has(#color-theme-toggle:checked) .dark-icon-button {
+	display: inline-block;
+}
+
+/* 3. When the checkbox is CHECKED, show the Sun */
+body:has(#color-theme-toggle:checked) .light-icon-button {
+	display: none;
+}
+
+.theme-button {
+	border: 3px solid transparent;
+	width: fit-content;
+	padding: 5px;
+	/* border-image: var(--gold-gradient) 1; */
+	background:
+		linear-gradient(var(--bg-dark-color), var(--bg-dark-color)) padding-box,
+		var(--gold-gradient) border-box;
+	border-radius: 15px;
+	box-shadow: 0 0 50px 4px rgba(203, 163, 101, 10);
+	/* background-color: rgba(203, 163, 101, 1); */
+}
+
+body:has(#color-theme-toggle:checked) .theme-button {
+	background:
+		linear-gradient(var(--bg-light-color), var(--bg-light-color)) padding-box,
+		var(--gold-gradient) border-box;
 }
