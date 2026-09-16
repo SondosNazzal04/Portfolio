@@ -154,3 +154,39 @@ body:has(#color-theme-toggle:checked) .section {
 body:has(#color-theme-toggle:checked) .first-name {
 	color: var(--primary-gold);
 }
+
+.about-section h1 {
+	color: var(--primary-gold);
+}
+
+.about-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+.about-columns {
+	display: flex;
+	margin: 2%;
+	justify-content: center;
+	justify-items: center;
+
+}
+
+.about-column {
+	margin: 2%;
+	background: var(--gold-gradient);
+	padding: 2%;
+	border-radius: 1rem;
+	color: var(--text-light-color);
+	/* background-color: var(--gold-gradient); */
+	/* background:
+		linear-gradient(var(--bg-light-color), var(--bg-light-color)) padding-box,
+		var(--gold-gradient) border-box; */
+}
+
+header {
+	margin: auto 1rem;
+}
