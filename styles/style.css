@@ -234,6 +234,30 @@ header {
 	padding-right: 0.5rem;
 	font-size: 70%;
 	width: fit-content;
+	transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+	.hero,
+	.columns,
+	.project-card {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.hero-text-col,
+	.hero-img-col,
+	.column,
+	.project-card .project-card-text,
+	.project-card .project-card-img {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.last-name {
+		margin-left: 0 !important;
+	}
 }
 
 .skill:hover {
@@ -252,6 +276,7 @@ header {
 	display: flex;
 	/* border: magenta 1px solid; */
 	padding: 2%;
+	transition: all 0.3s ease-in-out;
 }
 
 .project-card:hover {
@@ -283,6 +308,9 @@ header {
 
 .technology {
 	margin-right: 2%;
+	padding: 0.5em 1.2em in !important;
+	white-space: nowrap;
+	width: fit-content;
 	border: var(--text-dark-color) solid 3px;
 	padding: 0.5%;
 	border-radius: 2rem;
@@ -328,11 +356,12 @@ form button {
 footer {
 	width: 100% !important;
 	display: flex !important;
-	justify-content: space-between !important; /* Pushes the logo left and links right */
-	align-items: center !important; /* Vertically centers the logo and links */
+	justify-content: space-between !important;
+	align-items: center !important;
 	flex-direction: row !important;
 	margin-top: 10%;
 	margin-bottom: 0;
+	background-color: var(--bg-dark-color) !important;
 }
 
 footer .footer-links {
